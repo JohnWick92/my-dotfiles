@@ -14,17 +14,16 @@ config.font = wezterm.font_with_fallback({
 	{ family = "MesloLGS NF", scale = 1.3 },
 })
 config.window_background_opacity = 0.9
-config.leader = { key = ";", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
-	{ key = ";", mods = "LEADER | CTRL", action = act.SendKey({ key = ";", mods = "CTRL" }) },
-	{ key = "s", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-	{ key = "v", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-	{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
-	{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
-	{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
-	{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
-	{ key = "q", mods = "LEADER", action = act.CloseCurrentPane({ confirm = false }) },
-	{ key = "t", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
+	{ key = ";", mods = "CTRL", action = act.SendKey({ key = ";", mods = "CTRL" }) },
+	{ key = "s", mods = "CTRL", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ key = "v", mods = "CTRL", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "h", mods = "CTRL", action = act.ActivatePaneDirection("Left") },
+	{ key = "j", mods = "CTRL", action = act.ActivatePaneDirection("Down") },
+	{ key = "k", mods = "CTRL", action = act.ActivatePaneDirection("Up") },
+	{ key = "l", mods = "CTRL", action = act.ActivatePaneDirection("Right") },
+	{ key = "q", mods = "CTRL", action = act.CloseCurrentPane({ confirm = false }) },
+	{ key = "t", mods = "CTRL", action = act.SpawnTab("CurrentPaneDomain") },
 	{ key = "[", mods = "CTRL", action = act.ActivateTabRelative(-1) },
 }
 -- Uncomment this if you are running in wsl
