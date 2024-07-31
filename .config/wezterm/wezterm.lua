@@ -24,7 +24,8 @@ config.keys = {
 	{ key = "l", mods = "ALT", action = act.ActivatePaneDirection("Right") },
 	{ key = "q", mods = "CTRL", action = act.CloseCurrentPane({ confirm = false }) },
 	{ key = "t", mods = "CTRL", action = act.SpawnTab("CurrentPaneDomain") },
-	{ key = "[", mods = "CTRL", action = act.ActivateTabRelative(-1) },
+	{ key = "[", mods = "ALT", action = act.ActivateTabRelative(-1) },
+	{ key = "]", mods = "ALT", action = act.ActivateTabRelative(1) },
 }
 -- Uncomment this if you are running in wsl
 -- config.default_domain = "WSL:Ubuntu-24.04"
