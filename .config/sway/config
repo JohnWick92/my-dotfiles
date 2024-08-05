@@ -23,6 +23,9 @@ bindsym --to-code {
      # kill focused window
     $mod+c kill
 
+    # Reboot
+    $mod+shift+r exec reboot
+
     # lock screen
     $mod+g exec swaylock \
       --effect-blur 7x5 \
