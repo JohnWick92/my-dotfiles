@@ -25,6 +25,8 @@ bindsym --to-code {
 
     # Reboot
     $mod+shift+r exec reboot
+    # Shutdown
+    $mod+shift+d exec shutdown now
 
     # lock screen
     $mod+g exec swaylock \
