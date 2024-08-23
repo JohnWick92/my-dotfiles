@@ -7,15 +7,16 @@ end
 
 config.enable_scroll_bar = true
 config.enable_wayland = false
-config.color_scheme = "Tokyo Night"
+config.color_scheme = "Kanagawa Dragon (Gogh)"
 config.font = wezterm.font_with_fallback({
 	{ family = "JetBrains Mono", scale = 1.2 },
 	{ family = "IosevkaTerm Nerd Font", scale = 1.2 },
 	{ family = "MesloLGS NF", scale = 1.3 },
 })
 config.window_background_opacity = 0.9
+-- config.leader = { key = ";", mods = "CTRL", timeout_milliseconds = 2000 }
 config.keys = {
-	{ key = ";", mods = "CTRL", action = act.SendKey({ key = ";", mods = "CTRL" }) },
+	-- { key = ";", mods = "LEADER | CTRL", action = act.SendKey({ key = ";", mods = "CTRL" }) },
 	{ key = "s", mods = "CTRL", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 	{ key = "v", mods = "CTRL", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ key = "h", mods = "ALT", action = act.ActivatePaneDirection("Left") },
