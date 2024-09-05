@@ -18,7 +18,7 @@ bindsym --to-code {
     #clipboard history script similar to menu, but disabled for now
     #wl-clipboard-history doesn't allow copy/pasting of images or files
     #$mod+c exec urxvtc --title menu_term -e clipboard
-    $mod+b exec firefox
+    $mod+b exec zen-browser
     
      # kill focused window
     $mod+c kill
@@ -77,6 +77,7 @@ bindsym --to-code {
     # change container layout (stacked, tabbed, toggle split)
     $mod+s layout stacking
     $mod+w layout tabbed
+    $mod+shift+w layout toggle split
 
     # toggle tiling / floating
     $mod+shift+f floating toggle
@@ -189,7 +190,7 @@ for_window [title="^pulsemixer_term$"] floating enable, resize set width 36 ppt 
 
 
 #general settings
-gaps inner 11
+gaps inner 0
 gaps outer 0
 #hide mouse on inactivity
 seat * hide_cursor 10000
