@@ -2,7 +2,7 @@
 
 #set mod key to super
 set $mod Mod4
-exec wlr-randr --output DP-1 --off --output DP-3 --custom-mode 1920x1080@240Hz --scale 1
+exec wlr-randr --output DP-2 --off --output DP-3 --custom-mode 1920x1080@240Hz --scale 1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod normal
@@ -33,7 +33,7 @@ bindsym --to-code {
       --effect-blur 7x5 \
       --clock \
       --indicator \
-      --image ~/Pictures/wallpapers/nature12.avif
+      --image ~/Pictures/wallpapers/mint.png
 
     $mod+shift+e exec sway exit
 
@@ -133,7 +133,7 @@ bindsym --to-code {
     Print exec screenshot
 
        #open a file manager
-    $mod+e exec nautilus --new-window $HOME
+    $mod+e exec dolphin $HOME
 
 
     #open pulsemixer dialog
@@ -219,16 +219,18 @@ input type:keyboard {
   # this is now made by my keyboard driver uncomment if you can't do that
   # xkb_options caps:swapescape
 }
+exec /usr/lib/polkit-kde-authentication-agent-1
 
 # wallpaper settings
-output "*" bg $HOME/Pictures/wallpapers/nature12.avif fill
+output * bg $(find ~/Pictures/wallpapers/. -type f | shuf -n 1) fill
+# output "*" bg $HOME/Pictures/wallpapers/mint.png fill
 #exec termite --title drop_down_term
 exec flashfocus -t 200 -o 0.4 --no-flash-on-focus
 exec swaync
 exec swayidle -w \
-  timeout 120 'swaylock \
+  timeout 300 'swaylock \
       --effect-blur 7x5 \
       --clock \
       --indicator \
-      --image ~/Pictures/wallpapers/nature12.avif'
+      --image ~/Pictures/wallpapers/mint.png'
 
