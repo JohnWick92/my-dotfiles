@@ -3,6 +3,7 @@
 #set mod key to super
 set $mod Mod4
 exec wlr-randr --output DP-2 --off --output DP-3 --custom-mode 1920x1080@240Hz --scale 1
+exec ddcutil detect
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod normal
@@ -22,6 +23,10 @@ bindsym --to-code {
     
      # kill focused window
     $mod+c kill
+
+    # Adjust brightness
+    $mod+m exec ddcutil setvcp 10 + 10 -d 1 && ddcutil setvcp 10 + 10 -d 2
+    $mod+ctrl+m exec ddcutil setvcp 10 - 10 -d 1 && ddcutil setvcp 10 - 10 -d 2
 
     # Reboot
     $mod+shift+r exec reboot
